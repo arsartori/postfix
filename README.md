@@ -1,1 +1,2 @@
-# docker-postfix
+# docker-smtp
+Docker image form smtp
