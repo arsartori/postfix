@@ -1,0 +1,17 @@
+services:
+  smtp:
+    container_name: smtp
+    hostname: smtp
+    image: arsartori/postfix
+    ports:
+      - 25:25
+    environment:
+      MYNETWORKS: 0.0.0.0/0
+      MYHOSTNAME: smtp.lab.corp
+    networks:
+      - net-app
+
+networks:
+  net-app:
+    name: net-app
+    external: true
