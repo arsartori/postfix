@@ -5,7 +5,11 @@ services:
     image: arsartori/postfix
     ports:
       - 25:25
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - /opt/docker/smtp/queue:/var/log/queue.new
     environment:
+      RELAYHOST: smtp.localhost
       MYNETWORKS: 0.0.0.0/0
       MYHOSTNAME: smtp.lab.corp
     networks:
