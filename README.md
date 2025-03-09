@@ -1,4 +1,4 @@
-# SMTP Docker
+# Postfix
 
 ### Versões utilizadas
 * Alpine 3.15
@@ -6,6 +6,7 @@
 
 ## Criando a imagem
 	docker build -t postfix .
+
 ### Variaveis
 * `RELAYHOST` - Nome do servidor para relay ou em branco para atuar como gateway 
 * `MYNETWORKS` - Redes ou hosts permitidos de enviar e-mail
