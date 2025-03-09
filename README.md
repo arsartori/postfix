@@ -24,5 +24,5 @@
 ## Para visualizar a fila de mensagens
 	docker exec postfix postqueue -p
 
-# Para ver a versão do Postfix rodando
+## Para ver a versão do Postfix rodando
 	docker exec postfix postconf mail_version
