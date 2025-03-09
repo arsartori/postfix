@@ -4,8 +4,8 @@
 * Alpine 3.15
 * Postfix 3.6.11
 
-## Criando a imagem
-	docker build -t postfix .
+## Baixando a imagem
+	docker pull arsartori/postfix:latest
 
 ## Variaveis
 * `RELAYHOST` - Nome do servidor para relay ou em branco para atuar como gateway 
@@ -24,5 +24,5 @@
 ## Para visualizar a fila de mensagens
 	docker exec postfix postqueue -p
 
-# Para ver a versão do Postfix rodando
+## Para ver a versão do Postfix rodando
 	docker exec postfix postconf mail_version
