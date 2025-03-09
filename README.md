@@ -1,8 +1,8 @@
 # SMTP Docker
 
 ### Versões utilizadas
-* Alpine 3.17
-* Postfix 3.7.11
+* Alpine 3.15
+* Postfix 3.6.11
 
 ## Criando a imagem
 	docker build -t smtp .
