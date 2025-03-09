@@ -7,7 +7,7 @@
 ## Criando a imagem
 	docker build -t postfix .
 
-### Variaveis
+## Variaveis
 * `RELAYHOST` - Nome do servidor para relay ou em branco para atuar como gateway 
 * `MYNETWORKS` - Redes ou hosts permitidos de enviar e-mail
 * `MYHOSTNAME` - Nome do servidor
@@ -21,5 +21,5 @@
 ## Executado com Docker Compose
 	docker compose up -d
 
-### Para visualizar a fila de mensagens
+## Para visualizar a fila de mensagens
 	docker exec postfix postqueue -p
