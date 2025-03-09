@@ -16,7 +16,7 @@ jobs:
       - name: What
         run: |
           if [ ${{ github.ref }} == 'refs/heads/main' ]; then
-            echo "latest" >> $GITHUB_ENV
+            echo "BRANCH='latest'" >> $GITHUB_ENV
           else
             echo "BRANCH=${GITHUB_REF##*v}" >> $GITHUB_ENV
           fi
