@@ -16,7 +16,7 @@ jobs:
       - name: Branch name
         run: echo running on branch ${GITHUB_REF##*v}
       - name: What
-        run: echo "BRANCH=$"{GITHUB_REF##*v} >> $GITHUB_ENV
+        run: echo "BRANCH=${GITHUB_REF##*v}" >> $GITHUB_ENV
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
