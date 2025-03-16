@@ -1,8 +1,8 @@
 # Postfix
 
 ### Versões utilizadas
-* Alpine 3.18
-* Postfix 3.8.9
+* Alpine 3.16
+* Postfix 3.7.12
 
 ## Baixando a imagem
 	docker pull arsartori/postfix:latest

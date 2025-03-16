@@ -1,4 +1,4 @@
-FROM alpine:3.18
+FROM alpine:3.16
 LABEL maintainer="Andre Sartori <dev@aphtec.com.br>"
 RUN apk add --no-cache postfix
 ADD start_postfix.sh /usr/local/bin/
