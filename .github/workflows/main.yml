@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [ "main" ]
 env:
-  BRANCH='3.7.12'
+  BRANCH: "3.7.12"
 jobs:
   docker:
     runs-on: ubuntu-latest
