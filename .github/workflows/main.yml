@@ -1,5 +1,9 @@
 name: Publish Docker image
-on: push
+on:
+  pull_request:
+    branches: [ "main" ]
+env:
+  BRANCH='3.7.12'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -29,4 +33,4 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ github.repository }}:${{ env.BRANCH }}
+          tags: ${{ github.repository }}:${{ env.BRANCH }}, ${{ github.repository }}:latest
