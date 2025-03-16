@@ -2,8 +2,6 @@ name: Publish Docker image
 on:
   pull_request:
     branches: [ "main" ]
-env:
-  BRANCH: "3.7.12"
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -15,16 +13,6 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*v}
-      - name: Branch ENV
-        run: echo "BRANCH=3.7.12" >> $GITHUB_ENV
-#        run: |
-#          if [ ${{ github.ref }} == 'refs/heads/main' ]; then
-#            echo "BRANCH=latest" >> $GITHUB_ENV
-#          else
-#            echo "BRANCH=${GITHUB_REF##*v}" >> $GITHUB_ENV
-#          fi
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
@@ -34,4 +22,4 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ github.repository }}:${{ env.BRANCH }}, ${{ github.repository }}:latest
+          tags: ${{ github.repository }}:3.7.12, ${{ github.repository }}:latest
