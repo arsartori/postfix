@@ -1,5 +1,5 @@
-FROM alpine:3.16
-LABEL maintainer="Andre Sartori <dev@aphtec.com.br>"
+FROM alpine:3.18
+LABEL maintainer="Andre Sartori <andre@aphtec.com.br>"
 RUN apk add --no-cache postfix
 ADD start_postfix.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/start_postfix.sh

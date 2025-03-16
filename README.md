@@ -1,4 +1,4 @@
-# Postfix 3.7.12
+# Postfix 3.8.9
 
 ## Baixando a imagem
 	docker pull arsartori/postfix:latest
